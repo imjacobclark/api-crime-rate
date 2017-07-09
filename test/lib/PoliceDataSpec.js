@@ -62,8 +62,8 @@ describe("PoliceData", () => {
       let expectedEndpoint = BASE_API_URL + "crimes-street/all-crime?date=" + date + "&lat=" + lat +"&lng=" + long;
 
       return policeData.allStreetCrime(date, lat, long).then(data => {
-        data.get('violent-crimes').should.equal(3);
-        data.get('robbery').should.equal(1);
+        data[0]['count'].should.equal(3);
+        data[1]['count'].should.equal(1);
       });
     });
 
@@ -87,7 +87,7 @@ describe("PoliceData", () => {
       let expectedEndpoint = BASE_API_URL + "crimes-street/all-crime?date=" + date + "&lat=" + lat +"&lng=" + long;
 
       return policeData.allStreetCrime(date, lat, long).then(data => {
-        data.size.should.equal(0);
+        data.should.deep.equal([]);
       });
     });
   });

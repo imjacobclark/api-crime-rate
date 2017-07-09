@@ -9,7 +9,7 @@ This project is designed to be deployed as a Lambda function via an API Gateway 
 The API supports two ways of gathering crime data:
 
 * By Postcode: /postcode/{date}/{postcode}
-* By Place: /postcode/{date}/{place}
+* By Place: /place/{date}/{place}
 
 Postcode is the most accurate, by place (e.g "London" or "Manchester") attempts to locate the lat/long of a place - but it isn't 100% accurate. 
 
