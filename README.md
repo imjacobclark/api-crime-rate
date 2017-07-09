@@ -16,12 +16,42 @@ Postcode is the most accurate, by place (e.g "London" or "Manchester") attempts 
 An example response might look like:
 
 ```json
-[
-  ["anti-social-behaviour",663],
-  ["bicycle-theft",78],
-  ["burglary",72]
-]
+{
+  "crimes": [
+    {
+      "category": "anti-social-behaviour",
+      "count": 663
+    },
+    {
+      "category": "bicycle-theft",
+      "count": 78
+    },
+    {
+      "category": "burglary",
+      "count": 72
+    }
+  ],
+  "location": {
+    "name": "Manchester",
+    "postcode": "M2",
+    "borough": "Manchester",
+    "latitude": 53.4789436639108,
+    "longitude": -2.24527828995083
+  }
+}
 ```
+
+### Running on AWS
+
+1) Install Python 3, Node.js 6.10 and Troposphere.
+
+2) Update `deploy.sh` to match a bucket you have created in S3.
+
+3) Ensure your aws cli `~/.aws/credentials` is configured with an IAM role that can create resources.
+
+4) Run `./deploy.sh create`
+
+5) View the CloudFormation output for the URL to your newly created API
 
 ### With thanks to
 
