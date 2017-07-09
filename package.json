@@ -1,0 +1,19 @@
+{
+  "name": "crime-rate-api",
+  "version": "1.0.0",
+  "main": "app.js",
+  "author": "Jacob Clark",
+  "license": "MIT",
+  "scripts": {
+    "test": "mocha --recursive test"
+  },
+  "dependencies": {
+    "request": "^2.81.0",
+    "request-promise": "^4.2.1"
+  },
+  "devDependencies": {
+    "chai-spies": "git://github.com/chaijs/chai-spies.git#b11aeebf",
+    "chai": "^4.0.2",
+    "mocha": "^3.4.2"
+  }
+}
