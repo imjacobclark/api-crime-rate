@@ -1,6 +1,6 @@
 # UK Crime Rate API
 
-A simple API that returns crime rates for a UK postcode or location
+A simple API that returns crime rates for a UK postcode or location.
 
 ### Endpoints
 
@@ -49,9 +49,9 @@ An example response might look like:
 
 3) Ensure your aws cli `~/.aws/credentials` is configured with an IAM role that can create resources.
 
-4) Run `./deploy.sh create`
+4) Run `./deploy.sh create`.
 
-5) View the CloudFormation output for the URL to your newly created API
+5) View the CloudFormation output for the URL to your newly created API.
 
 ### With thanks to
 
