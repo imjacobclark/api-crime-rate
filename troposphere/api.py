@@ -97,11 +97,6 @@ for method in methods:
     ResourceId=Ref(query),
     HttpMethod="GET",
     Integration=Integration(
-      IntegrationResponses=[IntegrationResponse(
-        ResponseParameters={
-          "method.response.header.Access-Control-Allow-Origin": "'*'"
-        },
-      )],
       Credentials=GetAtt("CrimeDataExecutionRole", "Arn"),
       Type="AWS_PROXY",
       IntegrationHttpMethod='POST',
