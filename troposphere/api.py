@@ -50,7 +50,7 @@ t.add_resource(Role(
 ))
 
 # Create the Lambda function
-foobar_function = t.add_resource(Function(
+function = t.add_resource(Function(
   "CrimeDataAPIFunction",
   FunctionName="api-crime-rate",
   Code=Code(
