@@ -45,7 +45,7 @@ An example response might look like:
 
 1) Install Python 3, Node.js 6.10 and Troposphere.
 
-2) Update `deploy.sh` to match a bucket you have created in S3.
+2) Update `deploy.sh` `BUCKET` to match a bucket you have created in S3 and also `troposphere/api.py` `S3Bucket` to match the same bucket.
 
 3) Ensure your aws cli `~/.aws/credentials` is configured with an IAM role that can create resources.
 
