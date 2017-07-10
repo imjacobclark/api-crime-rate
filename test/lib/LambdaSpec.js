@@ -15,7 +15,7 @@ describe("Lambda", () => {
 
     it("will generate expected response object with an empty headers object", () => {
       Lambda.generateResponse()
-        .should.deep.include({"headers": {}});
+        .should.deep.include({"headers": { 'Access-Control-Allow-Origin': '*' }});
     });
 
     it("will generate expected response object with an expected status code", () => {
