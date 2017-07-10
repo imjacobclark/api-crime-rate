@@ -9,6 +9,8 @@ from troposphere.iam import Role, Policy
 from troposphere.awslambda import Function, Code, Permission
 from troposphere import GetAtt, Join
 
+bucket="imjacobclark-artifacts"
+
 t = Template()
 
 # Create the Api Gateway
@@ -54,7 +56,7 @@ function = t.add_resource(Function(
   "CrimeDataAPIFunction",
   FunctionName="api-crime-rate",
   Code=Code(
-    S3Bucket="imjacobclark-artifacts",
+    S3Bucket=bucket,
     S3Key="api-crime-rate.zip"
   ),
   Handler="app.handler",
